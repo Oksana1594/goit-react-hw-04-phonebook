@@ -21,7 +21,7 @@ const App = () => {
     const normalizedNumber = number.toLowerCase();
     const result = contacts.find(({ name, number }) => {
       return (
-        name.toLowerCase() === normalizedName &&
+        name.toLowerCase() === normalizedName ||
         number.toLowerCase() === normalizedNumber
       );
     });
