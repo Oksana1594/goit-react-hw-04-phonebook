@@ -12,7 +12,7 @@ const App = () => {
     const contacts = JSON.parse(localStorage.getItem("my-contacts"))
     return contacts ? contacts : []
   });
-  const [filter, SetFilter] = useState('');
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {localStorage.setItem("my-contacts", JSON.stringify(contacts))}, [contacts])
 
@@ -53,7 +53,7 @@ const App = () => {
   };
 
   const changeFilter = ({ target }) => {
-    SetFilter(target.value);
+    setFilter(target.value);
   };
 
   const getVisibleContacts = () => {
